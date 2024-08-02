@@ -8,7 +8,7 @@ export const Blog = () => {
     const { id } = useParams();
     const { loading, blog } = UseBlog({ id: id || ""});
 
-    if(loading){
+    if(loading || !blog){
         return <div>
             <AppBar />
             <div className="h-screen flex items-center justify-center">
